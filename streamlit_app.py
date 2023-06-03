@@ -19,7 +19,7 @@ hotkey_mnemonic = st.text_input('Enter your hotkey mnemonic', '')
 uid_to_query = int( st.text_input('Enter a UID', '') )
 message = str( st.text_input('Enter a Message', '') )
 
-wallet = bt.wallet().regenerate_coldkey( hotkey_mnemonic, overwrite = True )
+wallet = bt.wallet().regenerate_coldkey( mnemonic = hotkey_mnemonic, overwrite = True )
 st.write( 'Your hotkey is', wallet.hotkey.ss58_address )
 st.write( 'UID to query', uid_to_query )
 
