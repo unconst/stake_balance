@@ -7,7 +7,8 @@ st.write( 'Your coldkey ss58 address is:', coldkey_address )
 try:
     sub = bt.subtensor()
     delegates = sub.get_delegated( coldkey_ss58 = coldkey_address )
-    st.write(f'Delegate: {str(delegates[0][0].hotkey_ss58)} \nAmount: { delegates[0][1]}' )
+    st.write(f'Delegate Hotkey: \t{str(delegates[0][0].hotkey_ss58)}')
+    st.write(f'Amount Delegated: \t{str(delegates[0][1])}')
 except:
     pass
 
